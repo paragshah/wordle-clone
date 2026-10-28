@@ -1,0 +1,36 @@
+.toggle {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 20px;
+    min-width: 32px;
+    background-color: var(--color-tone-4);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+
+    &.disabled {
+        opacity: 0.5;
+    }
+
+    &.on {
+        background-color: var(--color-tone-5);
+
+        .knob {
+            transform: translateX(calc(100% - 4px));
+        }
+    }
+
+    .knob {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        height: 16px;
+        width: 50%;
+        background: #fff;
+        border-radius: 8px;
+        background-color: #fff;
+        transform: translateX(0);
+        transition: transform .3s;
+    }
+}

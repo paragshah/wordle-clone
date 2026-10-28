@@ -1,0 +1,39 @@
+.light {
+    --color-tone-1: #000;
+    --color-tone-2: #fff;
+    --color-tone-3: #d3d6da;
+    --color-tone-4: #878a8c;
+    --color-tone-5: #6aa967;
+    --color-tone-6: #787c7e;
+    --color-tone-7: #c9b45e;
+    --color-tone-8: #dfdfdf;
+    --color-tone-9: #787c7e;
+
+    /* widgets */
+    --color-dialog-background: rgba(255,255,255,0.5);
+    --color-dialog-border: #f6f7f8;
+    --color-dialog-text: #787c7e;
+}
+
+.dark {
+    --color-tone-1: #fff;
+    --color-tone-2: #121213;
+    --color-tone-3: #3a3a3c;
+    --color-tone-4: #565758;
+    --color-tone-5: #6aa967;
+    --color-tone-6: #787c7e;
+    --color-tone-7: #c9b45e;
+    --color-tone-8: #424242;
+    --color-tone-9: #3a3a3c;
+
+    /* widgets */
+    --color-dialog-background: rgba(0,0,0,0.5);
+    --color-dialog-border: #1a1a1b;
+    --color-dialog-text: #818384;
+}
+
+.high-contrast {
+    --color-tone-5: #f5793a;
+    --color-tone-6: #787c7e;
+    --color-tone-7: #85c0f9;
+}

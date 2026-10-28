@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.claude/
+
+# Editor
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Sass
+style/css/*.map

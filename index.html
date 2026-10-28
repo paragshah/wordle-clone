@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>paragshah.com - Wordle</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.webp">
+        <link rel="apple-touch-icon" sizes="192x192" href="images/apple-touch-icon.png">
+        <link rel="stylesheet" href="style/css/wordle.css">
+    </head>
+    <body class="container common-theme light">
+        <div class="content-container">
+            <div class="title-container">
+                <div class="menu"></div>
+                <div class="title">Wordle</div>
+                <div class="toolbar-container">
+                    <ul class="toolbar">
+                        <li class="help">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="4 4 24 24" width="28">
+                                <path fill="var(--color-tone-1)" d="M14.8333 23H17.1666V20.6667H14.8333V23ZM15.9999 4.33334C9.55992 4.33334 4.33325 9.56001 4.33325 16C4.33325 22.44 9.55992 27.6667 15.9999 27.6667C22.4399 27.6667 27.6666 22.44 27.6666 16C27.6666 9.56001 22.4399 4.33334 15.9999 4.33334ZM15.9999 25.3333C10.8549 25.3333 6.66659 21.145 6.66659 16C6.66659 10.855 10.8549 6.66668 15.9999 6.66668C21.1449 6.66668 25.3333 10.855 25.3333 16C25.3333 21.145 21.1449 25.3333 15.9999 25.3333ZM15.9999 9.00001C13.4216 9.00001 11.3333 11.0883 11.3333 13.6667H13.6666C13.6666 12.3833 14.7166 11.3333 15.9999 11.3333C17.2833 11.3333 18.3333 12.3833 18.3333 13.6667C18.3333 16 14.8333 15.7083 14.8333 19.5H17.1666C17.1666 16.875 20.6666 16.5833 20.6666 13.6667C20.6666 11.0883 18.5783 9.00001 15.9999 9.00001Z"></path>
+                            </svg>
+                        </li>
+                        <li class="stats">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="4 4 24 24" width="28">
+                                <path fill="var(--color-tone-1)" d="M20.6666 14.8333V5.5H11.3333V12.5H4.33325V26.5H27.6666V14.8333H20.6666ZM13.6666 7.83333H18.3333V24.1667H13.6666V7.83333ZM6.66659 14.8333H11.3333V24.1667H6.66659V14.8333ZM25.3333 24.1667H20.6666V17.1667H25.3333V24.1667Z"></path>
+                            </svg>
+                        </li>
+                        <li class="settings">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="4 4 24 24" width="28">
+                                <path fill="var(--color-tone-1)" d="M25.52 17.2534C25.5733 16.8534 25.6 16.44 25.6 16C25.6 15.5734 25.5733 15.1467 25.5067 14.7467L28.2133 12.64C28.4533 12.4534 28.52 12.0934 28.3733 11.8267L25.8133 7.40004C25.6533 7.10671 25.32 7.01338 25.0267 7.10671L21.84 8.38671C21.1733 7.88004 20.4667 7.45338 19.68 7.13338L19.2 3.74671C19.1467 3.42671 18.88 3.20004 18.56 3.20004H13.44C13.12 3.20004 12.8666 3.42671 12.8133 3.74671L12.3333 7.13338C11.5467 7.45338 10.8267 7.89338 10.1733 8.38671L6.98665 7.10671C6.69332 7.00004 6.35998 7.10671 6.19998 7.40004L3.65332 11.8267C3.49332 12.1067 3.54665 12.4534 3.81332 12.64L6.51998 14.7467C6.45332 15.1467 6.39998 15.5867 6.39998 16C6.39998 16.4134 6.42665 16.8534 6.49332 17.2534L3.78665 19.36C3.54665 19.5467 3.47998 19.9067 3.62665 20.1734L6.18665 24.6C6.34665 24.8934 6.67998 24.9867 6.97332 24.8934L10.16 23.6134C10.8267 24.12 11.5333 24.5467 12.32 24.8667L12.8 28.2534C12.8667 28.5734 13.12 28.8 13.44 28.8H18.56C18.88 28.8 19.1467 28.5734 19.1867 28.2534L19.6667 24.8667C20.4533 24.5467 21.1733 24.12 21.8267 23.6134L25.0133 24.8934C25.3067 25 25.64 24.8934 25.8 24.6L28.36 20.1734C28.52 19.88 28.4533 19.5467 28.2 19.36L25.52 17.2534ZM16 20.8C13.36 20.8 11.2 18.64 11.2 16C11.2 13.36 13.36 11.2 16 11.2C18.64 11.2 20.8 13.36 20.8 16C20.8 18.64 18.64 20.8 16 20.8Z"></path>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tile-container">
+                <ul class="tile-row0">
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                </ul>
+                <ul class="tile-row1">
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                </ul>
+                <ul class="tile-row2">
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                </ul>
+                <ul class="tile-row3">
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                </ul>
+                <ul class="tile-row4">
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                </ul>
+                <ul class="tile-row5">
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li>
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="keyboard-container">
+                <ul class="keyboard-qwerty">
+                    <li class="letter-q">q</li>
+                    <li class="letter-w">w</li>
+                    <li class="letter-e">e</li>
+                    <li class="letter-r">r</li>
+                    <li class="letter-t">t</li>
+                    <li class="letter-y">y</li>
+                    <li class="letter-u">u</li>
+                    <li class="letter-i">i</li>
+                    <li class="letter-o">o</li>
+                    <li class="letter-p">p</li>
+                </ul>
+                <ul class="keyboard-asdf">
+                    <li class="letter-a">a</li>
+                    <li class="letter-s">s</li>
+                    <li class="letter-d">d</li>
+                    <li class="letter-f">f</li>
+                    <li class="letter-g">g</li>
+                    <li class="letter-h">h</li>
+                    <li class="letter-j">j</li>
+                    <li class="letter-k">k</li>
+                    <li class="letter-l">l</li>
+                </ul>
+                <ul class="keyboard-zxcv">
+                    <li class="keyboard-enter">enter</li>
+                    <li class="letter-z">z</li>
+                    <li class="letter-x">x</li>
+                    <li class="letter-c">c</li>
+                    <li class="letter-v">v</li>
+                    <li class="letter-b">b</li>
+                    <li class="letter-n">n</li>
+                    <li class="letter-m">m</li>
+                    <li class="keyboard-delete">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" data-testid="icon-backspace">
+                            <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <dialog class="dialog dialog-help">
+            <div class="dialog-container">
+                <button class="dialog-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20">
+                        <path fill="var(--color-tone-1)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                    </svg>
+                </button>
+                <div class="help-container">
+                    <h1>How To Play</h1>
+                    <h2>Guess the Wordle in 6 tries.</h2>
+                    <ul class="help-instructions">
+                        <li>Each guess must be a valid 5-letter word.</li>
+                        <li>The color of the tiles will change to show how close your guess was to the word.</li>
+                    </ul>
+                    <div class="help-label">Examples</div>
+                    <div class="tile-container">
+                        <ul class="tile-row">
+                            <li class="animate">
+                                <div class="front letter">W</div>
+                                <div class="back correct">W</div>
+                            </li>
+                            <li>
+                                <div class="front letter">E</div>
+                                <div class="back"></div>
+                            </li>
+                            <li>
+                                <div class="front letter">A</div>
+                                <div class="back"></div>
+                            </li>
+                            <li>
+                                <div class="front letter">R</div>
+                                <div class="back"></div>
+                            </li>
+                            <li>
+                                <div class="front letter">Y</div>
+                                <div class="back"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="help-hint">
+                        <span class="help-letter">W</span> is in the word and in the correct spot.
+                    </div>
+                    <div class="tile-container">
+                        <ul class="tile-row">
+                            <li>
+                                <div class="front letter">P</div>
+                                <div class="back"></div>
+                            </li>
+                            <li class="animate">
+                                <div class="front letter">I</div>
+                                <div class="back found">I</div>
+                            </li>
+                            <li>
+                                <div class="front letter">L</div>
+                                <div class="back"></div>
+                            </li>
+                            <li>
+                                <div class="front letter">L</div>
+                                <div class="back"></div>
+                            </li>
+                            <li>
+                                <div class="front letter">S</div>
+                                <div class="back"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="help-hint">
+                        <span class="help-letter">I</span> is in the word but in the wrong spot.
+                    </div>
+                    <div class="tile-container">
+                        <ul class="tile-row">
+                            <li>
+                                <div class="front letter">V</div>
+                                <div class="back"></div>
+                            </li>
+                            <li>
+                                <div class="front letter">A</div>
+                                <div class="back"></div>
+                            </li>
+                            <li>
+                                <div class="front letter">G</div>
+                                <div class="back"></div>
+                            </li>
+                            <li class="animate">
+                                <div class="front letter">U</div>
+                                <div class="back wrong">U</div>
+                            </li>
+                            <li>
+                                <div class="front letter">E</div>
+                                <div class="back"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="help-hint">
+                        <span class="help-letter">U</span> is not in the word in any spot.
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <dialog class="dialog dialog-settings">
+            <div class="dialog-container">
+                <h1>Settings</h1>
+                <button class="dialog-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20">
+                        <path fill="var(--color-tone-1)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                    </svg>
+                </button>
+                <ul class="dialog-options">
+                    <li>
+                        <div class="dialog-pref">
+                            <div class="dialog-label">Hard Mode</div>
+                            <div class="dialog-sublabel">Any revealed hints must be used in subsequent guesses</div>
+                        </div>
+                        <button class="toggle toggle-hard-mode">
+                            <div class="knob"></div>
+                        </button>
+                    </li>
+                    <li>
+                        <div class="dialog-pref">
+                            <div class="dialog-label">Dark Theme</div>
+                        </div>
+                        <button class="toggle toggle-dark-theme">
+                            <div class="knob"></div>
+                        </button>
+                    </li>
+                    <li>
+                        <div class="dialog-pref">
+                            <div class="dialog-label">High Contrast Mode</div>
+                            <div class="dialog-sublabel">For improved color vision</div>
+                        </div>
+                        <button class="toggle toggle-high-contrast">
+                            <div class="knob"></div>
+                        </button>
+                    </li>
+                </ul>
+                <div class="author">Rewrite by Parag Shah. For educational purposes only.</div>
+            </div>
+        </dialog>
+        <dialog class="dialog dialog-stats">
+            <div class="dialog-container">
+                <button class="dialog-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20">
+                        <path fill="var(--color-tone-1)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                    </svg>
+                </button>
+                <div class="stats-container">
+                    <div class="stats-title">Statistics</div>
+                    <div class="stats-info">
+                        <ul>
+                            <li class="stats-info-title games-played"></li>
+                            <li class="stats-info-subtitle">Played</li>
+                        </ul>
+                        <ul>
+                            <li class="stats-info-title win-percentage"></li>
+                            <li class="stats-info-subtitle">Win %</li>
+                        </ul>
+                        <ul>
+                            <li class="stats-info-title win-streak">1</li>
+                            <li class="stats-info-subtitle">Current Streak</li>
+                        </ul>
+                        <ul>
+                            <li class="stats-info-title max-streak">4</li>
+                            <li class="stats-info-subtitle">Max Streak</li>
+                        </ul>
+                    </div>
+                    <div class="stats-title">Guess Distribution</div>
+                    <ul class="stats-graph-container">
+                        <li>
+                            <div class="stats-graph-label">1</div>
+                            <div class="stats-bar-container">
+                                <div class="stats-bar stats-bar-1"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stats-graph-label">2</div>
+                            <div class="stats-bar-container">
+                                <div class="stats-bar stats-bar-2"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stats-graph-label">3</div>
+                            <div class="stats-bar-container">
+                                <div class="stats-bar stats-bar-3"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stats-graph-label">4</div>
+                            <div class="stats-bar-container">
+                                <div class="stats-bar stats-bar-4"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stats-graph-label">5</div>
+                            <div class="stats-bar-container">
+                                <div class="stats-bar stats-bar-5"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stats-graph-label">6</div>
+                            <div class="stats-bar-container">
+                                <div class="stats-bar stats-bar-6"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="share-container">
+                    <button class="share-button">
+                        <span>Share</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20">
+                            <path fill="#fff" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </dialog>
+        <div class="toast">
+            <div class="toast-container"></div>
+        </div>
+        <script src="scripts/words.js"></script>
+        <script src="scripts/wordle.all.js"></script>
+        <!--
+        <script src="scripts/const.js"></script>
+        <script src="scripts/session.js"></script>
+        <script src="scripts/settings.js"></script>
+        <script src="scripts/stats.js"></script>
+        <script src="scripts/main.js"></script>
+        -->
+    </body>
+</html>

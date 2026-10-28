@@ -1,0 +1,32 @@
+.toast {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -15px;
+    z-index: 2;
+}
+
+.toast-container {
+    background-color: var(--color-tone-1);
+    border-radius: 4px;
+    color: var(--color-tone-2);
+    font-size: 13px;
+    padding: 12px;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+
+    &.fade-in {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s linear;
+    }
+
+    &.fade-out {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 0.3s, opacity 0.3s linear;
+    }
+}

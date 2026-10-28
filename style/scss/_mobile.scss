@@ -1,0 +1,94 @@
+@media only screen and (max-width: 425px) {
+    .keyboard-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+        li {
+            min-width: auto;
+            width: 8%;
+        }
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .title-container {
+        padding: 5px;
+
+        .menu {
+            width: 38px;
+        }
+
+        .title {
+            font-size: 26px;
+        }
+
+        .toolbar {
+            gap: 5px;
+
+            li {
+                position: relative;
+                top: 3px;
+            }
+        }
+
+        svg {
+            height: 80%;
+        }
+    }
+
+    .tile-container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 100;
+        position: relative;
+        gap: 5px;
+
+        ul {
+            position: relative;
+            display: inline-flex;
+            margin: 0 30px;
+        }
+
+        li {
+            width: 100%;
+            height: 100%;
+            max-height: 70px;
+            min-height: 60px;
+        }
+    }
+
+    .dialog.dialog-stats {
+
+        .stats-container {
+            padding-top: 0;
+            padding-left: 0;
+        }
+
+        .stats-title {
+            align-self: initial;
+            width: auto;
+            padding-left: 15px;
+        }
+
+        .stats-info-title {
+            font-size: 28px;
+        }
+
+        .stats-info {
+            margin-bottom: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            gap: 10px;
+        }
+    }
+}
